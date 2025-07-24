@@ -1,16 +1,29 @@
-# This is a sample Python script.
+from scripts.votes import get_results_per_states,get_results_per_cities
+from scripts.visualize import display_results
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print("Options:"
+      "\n1. Show results per city"
+      "\n2. Show results per states"
+      "\n3. Exit")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+available_options=[1,2,3]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+option=None
+
+while option is None:
+    option=int(input("What option you want to do?"))
+
+    if option not in available_options:
+        raise ValueError("Unknown option!")
+
+    if option == 1:
+        results=get_results_per_cities()
+        display_results(results,"city_name")
+
+    elif option == 2:
+        results=get_results_per_states()
+        display_results(results,"name")
+    elif option == 3:
+        print("Dovidjenja!")
+        break
