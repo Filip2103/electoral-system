@@ -25,5 +25,5 @@ while option is None:
         results=get_results_per_states()
         display_results(results,"name")
     elif option == 3:
-        print("Dovidjenja!")
+        print("Goodbye!")
         break

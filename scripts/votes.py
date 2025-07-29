@@ -53,7 +53,7 @@ def get_results_per_cities():
         JOIN cities c ON m.city_id = c.city_id
         GROUP BY c.city_id,c.city_name, cand.candidate_id, cand.name
         ORDER BY c.city_name, vote_percentage DESC;
- 
+        
     """
 
     cursor.execute(query)
