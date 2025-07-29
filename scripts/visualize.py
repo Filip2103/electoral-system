@@ -9,6 +9,6 @@ def display_results(data, group_label):
             print(f"\n {group_label.capitalize()}: {current_group}")
             print("-" * 40)
 
-        print(f"🗳 Candidate: {row['candidate_name']}")
+        print(f"   Candidate: {row['candidate_name']}")
         print(f"   Votes: {row['total_votes']}")
         print(f"   Percentage: {row['vote_percentage']}%\n")
